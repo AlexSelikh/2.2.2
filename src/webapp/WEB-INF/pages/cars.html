@@ -6,9 +6,20 @@
     <title>Car Table</title>
 </head>
 <body>
-<th:block th:each="car : ${car}">
-    <h1 th:text="${car}"></h1>
-</th:block>
+<table>
+    <tr>
+        <th>Manuf</th>
+        <th>Model</th>
+        <th>Series</th>
 
+    </tr>
+
+
+    <tr th:each="car: ${cars}">
+        <td th:text="${car.getManufacture()}">id</td>
+        <td th:text="${car.getModel()}">models</td>
+        <td th:text="${car.getSeries()}">series</td>
+    </tr>
+</table>
 </body>
 </html>
